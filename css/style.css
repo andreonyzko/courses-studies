@@ -63,7 +63,7 @@ nav a:hover{
 }
 
 #paralax-index h1, #paralax-government h1, #paralax-economy h1{
-    padding: 30vh;
+    padding: 30vh 0;
     color: white;
     font-size: 4vw;
     background-color: #d922118c;
@@ -157,6 +157,29 @@ footer a{
 }
 
 @media (max-width: 1000px){
+    header{
+        text-align: center;
+    }
+    header img{
+        width: 30%;
+    }
+
+    nav{
+        padding: 3vh 0;
+    }
+    nav a{
+        font-size: 1.5em;
+        display: block;
+        padding: 0.5vh;
+        border-bottom: #F2CB05 1px solid;
+        border-radius: 2vw;
+    }
+
+    #paralax-index h1, #paralax-government h1, #paralax-economy h1{
+        padding: 30vh 0;
+        font-size: 10vw;
+    }
+
     .informations-index{
         width: 90%;
         border-radius: 3vw;
@@ -167,8 +190,11 @@ footer a{
         margin-bottom: 1vh;
     }
     
-    
     #informations-section-index{
         text-align: center;
+    }
+
+    #texts-government details > summary{
+        font-size: 5vw;
     }
 }
