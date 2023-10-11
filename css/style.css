@@ -18,7 +18,7 @@ h1, h2{
 
 header img{
     padding: 2vh 2vw;
-    width: 12%;
+    width: 8%;
 }
 
 nav{
@@ -95,6 +95,15 @@ nav a:hover{
 #texts-government{
     padding: 5vh 2vw;
     text-align: center;
+}
+
+#texts-government > p{
+    margin-bottom: 4vh;
+}
+
+details > p{
+    text-align: justify;
+    padding: 2vh 2vw;
 }
 
 #texts-government details{
