@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body>
+<body onresize="resize()">
     <header>
         <h1>Meu Site</h1>
-        <span id="burguer" class="material-symbols-outlined" onclick="clickmenu()">menu</span>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickmenu()">menu</i>
         <menu id="menuburguer">
             <ul>
                 <a href=""><li>Opção 1</li></a>
@@ -29,6 +30,12 @@
         </article>
     </main>
     <script>
+        function resize(){
+            if(window.innerWidth <= 768){
+                menuburbuer.style.display= 'block';
+                burguer.style.display= 'none';
+            }
+        }
         function clickmenu(){
             if(menuburguer.style.display == "none"){
                 menuburguer.style.display = 'block';
