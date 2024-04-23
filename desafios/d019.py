@@ -1,5 +1,5 @@
 import random
-alunos = [0,1,2,3]
+alunos = ['','','','']
 
 for i in range(0, 4, 1):
     alunos[i] = input('Aluno {}: '.format(i+1))
