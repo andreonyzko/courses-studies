@@ -1,13 +1,6 @@
-import random
+from random import shuffle
 
-alunos= ['','','','']
+alunos = [input('Aluno 1: '),input('Aluno 2: '),input('Aluno 3: '),input('Aluno 4: ')]
+shuffle(alunos)
 
-for i in range(0,4,1):
-    alunos[i] = input('Aluno {}: '.format(i+1))
-
-random.shuffle(alunos)
-
-print('A ordem das apresentações será:')
-
-for i in range(0,4,1):
-    print('- ', alunos[i])
+print('A ordem das apresentações será: \n{}'.format(alunos))
