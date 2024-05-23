@@ -1,5 +1,7 @@
+print('{:=^40}'.format(' LOJA ONY '))
 price = float(input('Valor do produto: R$'))
-payment = input('Método de pagamento:\n- Dinheiro/cheque (-10%)\n- Cartão (-5%)\n- Até 2x no cartão (Preço normal)\n- +2x no cartão (+20%))\n')
+payment = input('Método de pagamento:\n- Dinheiro/cheque (-10%)\n- Cartão (-5%)\n- Até 2x no cartão (Preço normal)\n- +2x no cartão (+20%))\nEscolha: ')
+print('='*40)
 
 if payment.lower() == 'dinheiro' or payment == 'cheque':
     print('O valor final será {}'.format(price-(price*10/100)))
@@ -13,3 +15,5 @@ elif payment.isnumeric:
 
 else:
     print('Método de pagamento inválido.')
+
+print('='*40)

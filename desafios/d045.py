@@ -1,29 +1,39 @@
 from random import choice
+from time import sleep
 
 options = ['pedra','papel','tesoura']
-option = choice(options)
+computador = choice(options)
+print('{:=^40}'.format('JOKENPÔ'))
 player= input('Escolha entre pedra, papel e tesoura: ')
-print('Eu joguei {}, portanto: '.format(option))
-if option == 'pedra':
+print('-'*40)
+print('PEDRA',)
+sleep(1)
+print('PAPEL',)
+sleep(1)
+print('TESOURA!')
+if player.lower() == 'papel' or player.lower() == 'tesoura' or player.lower() == 'pedra':
+    print('Eu joguei {}, portanto '.format(computador.upper()), end='')
     if player.lower() == 'pedra':
-        print('EMPATE!')
+        if computador == 'pedra':
+            print('EMPATOU!')
+        elif computador == 'papel':
+            print('VOCÊ PERDE!')
+        elif computador == 'tesoura':
+            print('VOCÊ GANHOU!')
     elif player.lower() == 'papel':
-        print('VOCÊ VENCEU!')
+        if computador == 'pedra':
+            print('VOCÊ GANHOU!')
+        elif computador == 'papel':
+            print('EMPATOU!')
+        elif computador == 'tesoura':
+            print('VOCÊ PERDEU!')
     elif player.lower() == 'tesoura':
-        print('VOCÊ PERDEU!')
-elif option == 'papel':
-    if player.lower() == 'pedra':
-        print('VOCÊ PERDEU!')
-    elif player.lower() == 'papel':
-        print('EMPATE!')
-    elif player.lower() == 'tesoura':
-        print('VOCÊ VENCEU!')
-elif option == 'tesoura':
-    if player.lower() == 'pedra':
-        print('VOCÊ VENCEU!')
-    elif player.lower() == 'papel':
-        print('VOCÊ PERDEU!')
-    elif player.lower() == 'tesoura':
-        print('EMPATE!')
+        if computador == 'pedra':
+            print('VOCÊ PERDEU!')
+        elif computador  == 'papel':
+            print('VOCÊ GANHOU!')
+        elif computador == 'tesoura':
+            print('EMPATOU!')
 else:
     print('Escolha inválida.')
+print('='*40)

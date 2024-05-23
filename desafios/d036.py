@@ -1,5 +1,5 @@
 price = float(input('Valor do imóvel: '))
-salary = float(input('Seu salário: '))
+salary = float(input('Salário do comprador: '))
 year = int(input('Quantos anos de financiamento: '))
 permonth = price/(year*12)
 

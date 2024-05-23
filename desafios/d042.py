@@ -3,7 +3,7 @@ ca= float(input('Cateto Adjacente: '))
 co= float(input('Cateto Oposto: '))
 
 if hip < ca+co and ca < hip+co and co < hip+ca:
-    if hip == ca and ca == co:
+    if hip == ca == co:
         print('Triângulo Equilátero.')
     elif hip == ca or hip == co or ca == co:
         print('Triângulo Isósceles')
