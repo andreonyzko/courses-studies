@@ -2,7 +2,7 @@ numeros = ('zero', 'um','dois','tres','quatro','cinco','seis','sete','oito','nov
 
 while True:
     n= int(input('Digite um número entre 0 e 20: '))
-    if n >=0 and n<=20:
+    if 0 <= n <= 20:
         break
     print('Tente novamente. ', end='')
 

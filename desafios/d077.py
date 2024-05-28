@@ -9,6 +9,6 @@ for palavra in palavras:
                 vogais += f'{letra} '
     
     if len(vogais) > 0:
-        print(f'Vogais em "{palavra}": {vogais}')
+        print(f'Vogais da palavra "{palavra}": {vogais}')
     else:
-        print(f'Não há vogais em "{palavra}"')
+        print(f'Não há vogais na palavra "{palavra}"')
