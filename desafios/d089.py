@@ -22,7 +22,7 @@ print(f'{'ID':<3} {'NOME':<10} {'MÉDIA':^5}')
 print('-'*21)
 for id,b in enumerate(boletins):
 
-    print(f'{id+1:<3} {b[0]:<10} {(b[1][0]+b[1][1])/2:^5}')
+    print(f'{id+1:<3} {b[0]:<10} {(b[1][0]+b[1][1])/2:^5.1f}')
 print('='*21)
 
 while True:
