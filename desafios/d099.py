@@ -6,12 +6,14 @@ def maior(*num):
     print('Analisando os valores passados...')
     maior= 0
     for n in num:
-        print(f'{n} ', end='')
+        print(f'{n} ', end='', flush=True)
+        sleep(0.5)
         if n > maior:
             maior = n
     if len(num) > 0:
         print()
     print(f'Foram informados {len(num)} valores.')
+    sleep(0.5)
     print(f'O maior valor informado foi {maior}.')
 
 maior(randint(0,10), randint(0,10), randint(0,10), randint(0,10), randint(0,10), randint(0,10))
