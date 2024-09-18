@@ -1,0 +1,64 @@
+@charset
+@media print
+@media screen and (orientation: portrait/landscape)
+@media screen and (min-width:) and (max-width:)
+
+:root{
+ --varname: value;
+}
+
+background-color
+background-image: url
+background-image: linear-gradient
+background-size
+background-repeat
+background-position
+background-attachment
+background: color image position repeat attachment
+
+font: style weight size family
+font-weight
+font-family
+font-size
+font-style
+color
+
+text-align
+text-shadow
+text-indent
+text-decoration
+line-height
+
+border: width style color
+border-radius
+border-shadow
+border-image
+outline: width style color
+margin
+padding
+border
+
+width
+height
+max-width
+min-width
+max-height
+min-height
+
+display
+position
+transform: translate(-50%, -50%)
+cursor
+transition
+
+border-collapse
+vertical-align
+list-style-type
+list-style-position
+columns
+
+:hover
+:visited
+:active
+::after
+::before
