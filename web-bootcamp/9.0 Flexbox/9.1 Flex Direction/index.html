@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Direction</title>
     <style>
-        .container{display: flex; font-size: 1.5rem;}
+        /*
+        flex-direction
+        flex-basis
+        align-content
+        */
+        .container{display: flex; font-size: 1.5rem; }
 
         .one{flex-direction: row;}
 
-        .two{flex-direction: row-reverse;}
+        .two{flex-direction: row-reverse;} 
 
-        .three{display: inline-flex; flex-direction: column;}
+        .three{flex-direction: column;}
 
-        .four{display: inline-flex; flex-direction: column-reverse;}
+        .four{flex-direction: column-reverse;}
 
         .container div{
             padding: 10px;
             color: white;
+            flex-basis: 200px;
+            align-content: center;
+            text-align: center;
         }
 
         .red{background-color: red;}
