@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layoyt</title>
+    <style>
+        .container{display:flex; gap: 10px; border: 1px solid black}
+        p{font-size: 1.5rem;}
+        p::before{content: "•  ";}
+        h2{margin-top: 15vh;}
+        h2:first-of-type{margin-top: 0;}
+
+        .one span{background-color: royalblue; color:white; padding: 10px;}
+        #one-A{order: 1;}
+        #one-N{order: 2;}
+        #one-D{order: 3;}
+        #one-R{order: 4;}
+        #one-E{order: 5;}
+
+        .container div{
+            background-color: royalblue;
+            width: 450px;
+            height: 100px;
+        }
+
+        .two{flex-wrap: nowrap;}
+        .three{flex-wrap: wrap;}
+        .four{flex-wrap: wrap-reverse;}
+
+        .five{justify-content: flex-start;}
+        .six{justify-content: flex-end;}
+        .seven{justify-content: center;}
+        .eight{justify-content: space-between;}
+        .nine{justify-content: space-around;}
+        .ten{justify-content: space-evenly;}
+
+        .eleven{align-items: flex-start;}
+        .twenty{align-items: flex-end;}
+        .thirteen{align-items: center;}
+
+        .align-content{height: 500px; flex-wrap: wrap;}
+        .align-content div{width: 500px;}
+
+        .fourteen{align-content: flex-start;}
+        .fiveteen{align-content: flex-end;}
+        .sixteen{align-content: center;}
+        .seventeen{align-content: space-between;}
+        .eighteen{align-content: space-around;}
+        .nineteen{align-content: space-evenly;}
+    </style>
+</head>
+<body>
+    <h2>ORDER</h2>
+    <div class="container one">
+        <span>A</span>
+        <span>E</span>
+        <span>R</span>
+        <span>D</span>
+        <span>N</span>
+        <span>-></span>
+        <span id="one-A">A</span>
+        <span id="one-E">E</span>
+        <span id="one-R">R</span>
+        <span id="one-D">D</span>
+        <span id="one-N">N</span>
+    </div>
+    <h2>FLEX-WRAP</h2>
+    <p>nowrap</p>
+    <div class="container two">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>wrap</p>
+    <div class="container three">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>wrap-reverse</p>
+    <div class="container four">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h2>JUSTIFY-CONTENT</h2>
+    <p>flex-start</p>
+    <div class="container five">
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container six">
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>center</p>
+    <div class="container seven">
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-beetween</p>
+    <div class="container eight">
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container nine">
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-evenly</p>
+    <div class="container ten">
+        <div></div>
+        <div></div>
+    </div>
+
+    <h2>ALIGN-ITENS</h2>
+    <p>flex-start</p>
+    <div class="container eleven align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container twenty align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>center</p>
+    <div class="container thirteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h2>ALIGN-CONTENT</h2>
+    <p>flex-start</p>
+    <div class="container fourteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container fiveteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>center</p>
+    <div class="container sixteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-beetween</p>
+    <div class="container seventeen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container eighteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <p>space-evenly</p>
+    <div class="container nineteen align-content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
