@@ -1,0 +1,45 @@
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1{
+    color: #39DA80;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #3D3A40;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+label{
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.43);
+}
+
+button{
+    padding: 10px 0;
+    background-color: #39DA80;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+
+    &:hover{
+        background-color: #39da7fcb;
+        transition: 0.2s;
+    }
+}
