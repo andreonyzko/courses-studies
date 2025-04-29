@@ -1,20 +1,32 @@
+
 .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     justify-content: center;
 
     background-color: #3A3D43;
     color: white;
 
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
-    width: 30%;
 
     h1{
         color: #3CDA82;
         text-align: center;
+        padding-bottom: 10px;
     }
+}
+
+p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    gap: 20px;
 }
 
 input{
@@ -41,4 +53,8 @@ button{
 ul{
     list-style-type: none;
     text-align: center;
+}
+
+img{
+    width: 150px;
 }

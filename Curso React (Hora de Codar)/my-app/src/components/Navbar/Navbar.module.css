@@ -1,0 +1,33 @@
+ul{
+    list-style-type: none;
+    background-color: #3A3D43;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    &:hover{
+        span{
+            display: block;
+        }
+    }
+}
+
+span{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    &:hover{ background-color: #3CDA82; transition: 0.3s;}
+}
+
+svg{
+    font-size: 1.5em;
+}
