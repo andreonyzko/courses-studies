@@ -1,0 +1,41 @@
+.Pessoa{
+    background-color: #3A3D43;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+
+    h2{
+        color: #3CDA82;
+        text-transform: uppercase;
+    }
+
+    p{
+        color: white;
+    }
+
+    img{
+        width: 200px;
+        background-color: white;
+        border-radius: 100%;
+    }
+
+    button{
+        background-color: #3CDA82;
+        border: 0;
+        color: white;
+        font-weight: bolder;
+        padding: 10px 0;
+        flex-grow: 1;
+    }
+
+    .buttonContainer{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+}

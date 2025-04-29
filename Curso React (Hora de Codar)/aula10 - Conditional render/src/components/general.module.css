@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+
+    background-color: #3A3D43;
+    color: white;
+
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+
+    h1{
+        color: #3CDA82;
+        text-align: center;
+    }
+}
+
+input{
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+}
+
+button{
+    padding: 10px 0;
+    background-color: #3CDA82;
+    color: white;
+    font-weight: bolder;
+    border: 0;
+    border-radius: 20px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
