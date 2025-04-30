@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1em;
+
+    ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    
+    li{
+        margin-right: 1em;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    
+        &:hover{
+            color: #ffbb33;
+            transition: 0.3s;
+        }
+    }
+    
+    span{
+        font-weight: bold;
+        color: #ffbb33;
+    }
+}

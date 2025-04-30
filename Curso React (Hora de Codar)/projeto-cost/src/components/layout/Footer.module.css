@@ -1,0 +1,26 @@
+footer{
+    background-color: #222;
+    color: white;
+    padding: 2em 3em;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+
+    ul{
+        list-style-type: none;
+        font-size: 1.2em;
+
+        display: flex;
+    }
+
+    li{
+        margin-right: 1em;
+    }
+    
+    li:hover{
+        color: #ffbb33;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}
