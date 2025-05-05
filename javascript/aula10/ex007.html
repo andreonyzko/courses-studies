@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        input[type="number"]{
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+            text-align: center;
+            width: 50px;
+            padding: 0.3em 1em;
+        }
+
+        output{
+            padding: 0.3em 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <form>
+        <input id="n1" type="number" placeholder="n1" value="0" onchange="somar()"> +
+        <input id="n2" type="number" placeholder="n2" value="0" onchange="somar()"> =
+        <output id="result">0</output>
+    </form>
+    <script>
+        function somar() {
+            var resultfield = document.querySelector('#result')
+            var n1 = document.querySelector('#n1').value
+            var n2 = document.querySelector('#n2').value
+            var result = Number(n1)+Number(n2)
+            resultfield.innerHTML = result
+        }
+    </script>
+</body>
+</html>

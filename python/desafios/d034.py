@@ -1,0 +1,2 @@
+salario = float(input('Salario: '))
+print('O aumento será de R${} (10%), ficando R${}.'.format(salario*10/100, salario+salario*10/100) if salario>1250 else 'O aumento será de R${} (15%), ficando R${}.'.format(salario*15/100, salario+salario*15/100))

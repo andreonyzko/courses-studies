@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            box-shadow: 1px 0px 8px #00000029;
+        }
+
+        nav{
+            background-color: rgb(63, 62, 62);
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.479);
+        }
+        nav > a{
+            margin-right: 30px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        article{
+            background-color: lightgray;
+            padding: 10px 4px;
+            margin: 3px 0px;
+            border-radius: 5px;
+        }
+        article > h2{
+            margin: 0px;
+        }
+        article > p {
+            text-align: justify;
+        }
+        article > aside{
+            background-color: gray;
+            padding: 4px;
+        }
+        aside > p {
+            margin: 0px;
+            text-align: center;
+            color: white;
+        }
+        footer {
+            background-color: black;
+            text-align: center;
+            color: white;
+            padding: 6px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+        
+        .titulo-assuntos {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p class="titulo-assuntos" > > Esporte Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, modi asperiores dignissimos debitis sequi cupiditate vel enim nobis, harum mollitia ipsam. Maiores rerum, eum hic dolorum repellat magnam veritatis id.</p>
+                <aside>
+                    <p>Artigo escrito por André Onyszko</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pela OnyInfo</p>
+    </footer>
+</body>
+</html>
