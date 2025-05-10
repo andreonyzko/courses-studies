@@ -15,13 +15,11 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-html {
+html, body, #root{
   height: 100vh;
-  font-size: 18px;
 }
 
-#root {
-  height: 100vh;
+#root{
   display: grid;
   grid-template: 10vh 85vh 5vh / 1fr;
 }

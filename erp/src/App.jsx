@@ -9,14 +9,14 @@ import { useState } from 'react';
 
 function App() {
 
-  const [unnav, setUnnav] = useState(false);
+  const [unnav, setUnnav] = useState(true);
 
   return (
     <Router>
       <Header unnav={unnav} setUnnav={setUnnav} />
 
-      <div className='nav-main-container'>
-        <Navbar unnav={unnav}/>
+      <div className={unnav ? 'nav-main-container unnav' : 'nav-main-container'}>
+        <Navbar/>
         <div className="main-container">
           <Main />
         </div>

@@ -1,3 +1,5 @@
+import TopBar from '../../layout/TopBar/TopBar'
+import FilterForm from '../../layout/Form/FilterForm'
 import Table from '../../layout/Table/Table'
 
 function Agenda() {
@@ -26,6 +28,8 @@ function Agenda() {
     
     return (
         <>
+            <TopBar title='Agenda' btn='Novo' btntype='new'/>
+            <FilterForm></FilterForm>
             <Table heads={theads} rows={trows}></Table>
         </>
     )

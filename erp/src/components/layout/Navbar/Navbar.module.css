@@ -20,15 +20,17 @@ nav {
 
     ul {
         list-style-type: none;
-        font-size: 1rem;
-
     }
 
     a {
         display: flex;
         gap: 30px;
         align-items: flex-end;
-        padding: 20px;
+        padding: 17px 20px;
+    }
+
+    svg{
+        width: 22px;
     }
 
     >ul>li {
@@ -47,26 +49,12 @@ nav {
 
         >ul {
             >li>a {
-                padding: 5px 20px;
+                padding: 5px 15px;
             }
 
             >:last-child {
                 padding-bottom: 10px;
             }
-        }
-    }
-}
-
-.unnav {
-    display: none !important;
-}
-
-@media screen and (min-width: 768px) {
-    .unnav {
-        display: initial !important;
-
-        span {
-            display: none;
         }
     }
 }

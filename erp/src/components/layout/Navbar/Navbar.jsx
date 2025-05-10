@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 import styles from './Navbar.module.css'
 
-function Navbar({ unnav }) {
+function Navbar() {
     return (
-        <nav className={unnav ? styles.unnav : ''}>
+        <nav>
             <ul>
                 <li>
                     <Link to='/'>
