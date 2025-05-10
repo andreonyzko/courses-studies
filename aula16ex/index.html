@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            <form>
+                <label for="number">Número (1 a 100): </label>
+                <input type="number" name="number" id="number">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+                <br>
+                <select name="values" id="values" style="width: 40%; margin: 1em 0;" size="10">
+                </select>
+                <br>
+                <input type="button" value="Finalizar" onclick="finalizar()">
+            </form>
+        </div>
+        <div id="result">
+
+        </div>
+    </section>
+    <footer>
+        &copy; Andre Onyszko
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
