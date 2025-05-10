@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+*{text-align: center;}
+
+.colors-txt{font-weight: normal;}
+.colors-containers{width: 15vw; height: 200px;}
+
+#red-txt{color: red;}
+#blue-txt{color: royalblue;}
+#orange-txt{color: orange;}
+#green-txt{color: mediumseagreen;}
+#yellow-txt{color: khaki;}
+
+#red-container{background-color: red;}
+#blue-container{background-color: royalblue;}
+#orange-container{background-color: orange;}
+#green-container{background-color: mediumseagreen;}
+#yellow-container{background-color: khaki;}
+
+.containers{
+    display: inline-block;
+}
