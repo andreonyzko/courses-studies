@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Ano de nascimento:
+                <input type="number" name="yearbirth" id="yearbirth" required min="0">
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="gender" id="male" checked>
+                <label for="male">Masculino</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Feminino</label>
+            </p>
+            <input type="submit" value="Verificar" onclick="verify()">
+        </div>
+        <div id="container-result">
+            <p></p>
+        </div>
+    </section>
+    <footer>
+        &copy; Andre Onyszko
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
