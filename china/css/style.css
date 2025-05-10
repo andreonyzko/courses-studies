@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+:root{
+    --yellow: #F2CB05;
+    --orange: #F2A007;
+    --red: #D92211;
+    --black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header img{
+    padding: 2vh 2vw;
+    width: 8%;
+}
+
+nav{
+    margin-top: 3vh;
+    background-color: var(--red);
+    padding: 1%;
+    text-align: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    margin: 0 10vw;
+}
+
+nav a:hover{
+    color: var(--yellow);
+    transition: 0.3s;
+}
+
+#paralax-index, #paralax-government, #paralax-economy{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+#paralax-index{
+    background-image: url(../img/paralax-china.jpg);
+}
+
+#paralax-government{
+    background-image: url(../img/sede-governo.jpg);
+}
+
+#paralax-economy{
+    background-image: url(../img/dinheiro-chines.jpg);
+}
+
+#paralax-index h1, #paralax-government h1, #paralax-economy h1{
+    padding: 30vh 0;
+    color: white;
+    font-size: 4vw;
+    background-color: #d922118c;
+}
+
+.informations-index{
+    width: 10vw;
+    min-height: 10vw;
+    max-height: fit-content;
+    display: inline-block;
+    background-color: var(--red);
+    vertical-align: middle;
+    color: white;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10%;
+}
+
+.informations-index h2{
+    color: var(--yellow);
+    margin-bottom: 1vh;
+}
+
+
+#informations-section-index{
+    text-align: center;
+}
+
+#texts-government{
+    padding: 5vh 2vw;
+    text-align: center;
+}
+
+#texts-government > p{
+    margin-bottom: 4vh;
+}
+
+details > p{
+    text-align: justify;
+    padding: 2vh 2vw;
+}
+
+#texts-government details{
+    padding: 3vh 1vw;
+    background-color: #d92211;
+    margin-top: 1vh;
+    border-radius: 2px;
+}
+
+#texts-government details > summary{
+    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+
+#texts-government details p{
+    color: rgba(245, 245, 245, 0.856);
+}
+
+#texts-government details > summary::-webkit-details-marker {
+    display: none;
+}
+
+#texts-government details > summary::after {
+    display: inline-block;
+    content: '+';
+    font-size: 1em;
+    float: right;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    margin-right: 2vw;
+}
+
+#texts-government details[open] > summary::after {
+    transform: rotate(90deg);
+    content: '|';
+    font-size: 1em;
+    float: right;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+footer{
+    background-color: var(--red);
+    text-align: center;
+    color: white;
+}
+
+footer p{
+    padding: 5vh 0;
+    font-size: 1.2em;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--orange);
+}
+
+@media (max-width: 820px){
+    header{
+        text-align: center;
+    }
+    header img{
+        width: 30%;
+    }
+
+    nav{
+        padding: 3vh 0;
+    }
+    nav a{
+        font-size: 1.5em;
+        display: block;
+        padding: 0.5vh;
+        border-bottom: #F2CB05 1px solid;
+        border-radius: 2vw;
+    }
+
+    #paralax-index h1, #paralax-government h1, #paralax-economy h1{
+        padding: 30vh 0;
+        font-size: 10vw;
+    }
+
+    .informations-index{
+        width: 90%;
+        border-radius: 3vw;
+    }
+    
+    .informations-index h2{
+        color: var(--yellow);
+        margin-bottom: 1vh;
+    }
+    
+    #informations-section-index{
+        text-align: center;
+    }
+
+    #texts-government details > summary{
+        font-size: 5vw;
+    }
+}
