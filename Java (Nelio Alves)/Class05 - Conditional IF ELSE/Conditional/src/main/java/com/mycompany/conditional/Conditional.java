@@ -23,7 +23,10 @@ public class Conditional {
             }
             else{
                 System.out.println("You entered an invalid hour");
+                break;
             }
         }
+
+        sc.close();
     }
 }

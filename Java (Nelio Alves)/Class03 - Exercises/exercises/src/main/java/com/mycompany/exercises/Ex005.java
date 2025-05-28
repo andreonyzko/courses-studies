@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class Ex005 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int id, amount;
-        int id2, amount2;
+        int amount;
+        int amount2;
         double unityValue, unityValue2;
         
         System.out.print("Enter first product id: ");
-        id = sc.nextInt();
+        sc.nextInt();
         System.out.print("Enter first product amount: ");
         amount = sc.nextInt();
         System.out.print("Enter first product unity value: ");
         unityValue = sc.nextDouble();
         
         System.out.print("Enter second product id: ");
-        id2 = sc.nextInt();
+        sc.nextInt();
         System.out.print("Enter second product amount: ");
         amount2 = sc.nextInt();
         System.out.print("Enter second product unity value: ");

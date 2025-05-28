@@ -30,5 +30,7 @@ public class ScopeInitialization {
         }
         
         System.out.println("Disccount: $" + disccount);
+
+        sc.close();
     }
 }

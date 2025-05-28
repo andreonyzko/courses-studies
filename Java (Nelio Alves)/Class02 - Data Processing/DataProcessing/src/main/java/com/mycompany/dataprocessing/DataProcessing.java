@@ -23,10 +23,9 @@ public class DataProcessing {
         System.out.println("Area = " + area);
         
         // Example 4
-        int a, c;
+        int a;
         double result;
         a= 5;
-        c= 2;
         result = (double) a / b; // casting
         System.out.println("Result = " + result);
         

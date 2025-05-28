@@ -12,5 +12,7 @@ public class Ternary {
         double disccount = (price < 20.00) ? (price*0.1) : (price*0.05); // ternary conditional
         
         System.out.println("Disccount: $" + disccount);
+
+        sc.close();
     }
 }

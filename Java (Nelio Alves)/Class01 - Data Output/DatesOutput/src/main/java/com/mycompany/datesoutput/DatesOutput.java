@@ -1,8 +1,6 @@
 
 package com.mycompany.datesoutput;
 
-import java.util.Locale;
-
 public class DatesOutput {
 
     public static void main(String[] args) {
