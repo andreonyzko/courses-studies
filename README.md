@@ -8,6 +8,7 @@ Este repositório reúne materiais de estudo e projetos desenvolvidos durante di
 
 - **HTML5**
 - **CSS3**
+- **BootStrap**
 - **JavaScript**
 - **React.js**
 - **Python**
