@@ -11,5 +11,6 @@ Este repositório reúne materiais de estudo e projetos desenvolvidos durante di
 - **JavaScript**
 - **React.js**
 - **Python**
+- **Java**
 
 ---
