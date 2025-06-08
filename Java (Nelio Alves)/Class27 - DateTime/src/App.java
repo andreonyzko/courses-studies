@@ -1,22 +1,14 @@
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // OBTER DADOS DE UMA DATA-HORA LOCAL
-        // Data-hora local -> dia, mes, ano, horário
-
-        // CONVERTER DATA-HORA GLOBAL PARA LOCAL
-        // Data-hora global, timezone (sistema local) -> data-hora local
-
-        // CÁLCULOS COM DATA-HORA
-        // Data-hora +/- tempo -> data-hora
-        // Data-hora 1, Data-hora 2 -> duração
-
-        // Instanciação com data-hora atual
+        // Instanciação: com data-hora atual
         System.out.println("\n===================================");
         System.out.println("    DATE-TIME NOW INSTANTIATION    ");
         System.out.println("===================================");
@@ -29,7 +21,7 @@ public class App {
         Instant globalDateTimeNow = Instant.now();
         System.out.println("\nGlobal Date Time now: \n" + globalDateTimeNow);
 
-        // Instanciação com formato ISO 8601
+        // Instanciação: com formato ISO 8601
         System.out.println("\n===================================");
         System.out.println("       ISO 8601 INSTANTIATION       ");
         System.out.println("===================================");
@@ -44,7 +36,7 @@ public class App {
         System.out.println("\nGlobal Date Time now: \n" + globalDateTime);
         System.out.println("\nGlobal Date Time now: \n" + globalDateTimeSP);
 
-        // Texto formatado customizado -> data-hora
+        // Instanciação: com texto formatado customizado
         System.out.println("\n===================================");
         System.out.println("         CUSTOM TO DATE-TIME         ");
         System.out.println("===================================");
@@ -57,7 +49,7 @@ public class App {
         LocalDateTime customLocalDateTime = LocalDateTime.parse("26/02/2005 12:39", formatDayMonthYearHourMinutes);
         System.out.println("\nCustom pattern to Local Date Time: \n" + customLocalDateTime);
 
-        // dia, mes, ano, [horario] -> data-hora local
+        // Instanciação: com dia, mes, ano, [horario] -> data-hora local
         System.out.println("\n===================================");
         System.out.println("     OF DAY, MONTH, YEAR, HOUR     ");
         System.out.println("===================================");
@@ -68,7 +60,7 @@ public class App {
         LocalDateTime localDateTimeOf = LocalDateTime.of(2005, 2, 26, 12, 39, 50);
         System.out.println("\nLocal Date Time Of 2005, 02, 26, 12, 39, 50:\n" + localDateTimeOf);
 
-        // Data-hora -> texto formatado customizado
+        // Data-hora para texto
         System.out.println("\n===================================");
         System.out.println("     DATE-TIME TO CUSTOM FORMAT     ");
         System.out.println("===================================");
@@ -81,5 +73,41 @@ public class App {
 
         DateTimeFormatter formatDayMothYearHourMinutesZone = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
         System.out.println("\nGlobal Date Time to formart dd/MM/yyyy HH:mm: \n" + formatDayMothYearHourMinutesZone.format(globalDateTimeNow));
+
+        // Transformação: data-hora global para local
+        System.out.println("\n===================================");
+        System.out.println("        GLOBAL TO LOCAL DATE        ");
+        System.out.println("===================================");
+        LocalDate localDateFromGlobal = LocalDate.ofInstant(globalDateTime, ZoneId.systemDefault()); // ZoneId.getAvailableZoneIds()
+        System.out.println("\nLocal Date from Global Date: \n" + localDateFromGlobal);
+
+        LocalDateTime localDateTimeFromGlobal = LocalDateTime.ofInstant(globalDateTime, ZoneId.systemDefault());
+        System.out.println("\nLocal Date Time from Global Date: \n" + localDateTimeFromGlobal);
+
+        // Coleta: dados de uma data
+        System.out.println("\n===================================");
+        System.out.println("       COLLET DATA FROM DATE       ");
+        System.out.println("===================================");
+        System.out.println("\nDay: " + localDate.getDayOfMonth());
+        System.out.println("Month: " + localDate.getMonth());
+        System.out.println("Year: " + localDate.getYear());
+
+        // Calculos com data-hora
+        System.out.println("\n===================================");
+        System.out.println("     CALCULATION WITH DATE-TIME     ");
+        System.out.println("===================================");
+        LocalDateTime pastWeekLocalDate = localDateTime.minusDays(7);
+        LocalDateTime nextWeekLocalDate = localDateTime.plusDays(7);
+        System.out.println("\nMinus 7 days: \n" + pastWeekLocalDate);
+        System.out.println("\nMore 7 days: \n" + nextWeekLocalDate);
+
+        Instant pastWeekInstant = globalDateTime.minus(7, ChronoUnit.DAYS);
+        Instant nextWeekInstant = globalDateTime.plus(7, ChronoUnit.DAYS);
+        System.out.println("\nMinus 7 days: \n" + pastWeekInstant);
+        System.out.println("\nMore 7 days: \n" + nextWeekInstant);
+
+        Duration duration = Duration.between(pastWeekInstant, nextWeekInstant);
+        System.out.println("\nDuration: \n" + duration.toDays() + " days");
+        System.out.println(duration.toHours() + " hours");
     }
 }
