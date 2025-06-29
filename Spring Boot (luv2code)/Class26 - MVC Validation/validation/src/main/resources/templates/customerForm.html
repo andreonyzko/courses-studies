@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Costumer Form</title>
+    <style>
+        .erros{ color: red; }
+        .required::after{ content: '*'; color: red;}
+    </style>
+</head>
+<body>
+    <form th:action="@{/confirm}" th:object="${customer}" method="POST">
+        <fieldset>
+            <label for="firstName" class="required">First Name: </label>
+            <input type="text" name="firstName" id="firstName" th:field="*{firstName}">
+            <span class="erros" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+        </fieldset>
+        
+        <fieldset>
+            <label for="lastName" class="required">Last Name: </label>
+            <input type="text" name="lastName" id="lastName" th:field="*{lastName}">
+            <span class="erros" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+        </fieldset>
+
+        <fieldset>
+            <label for="creditScore" class="required">Credit Score</label>
+            <input type="text" name="creditScore" id="creditScore" th:field="*{creditScore}">
+            <span class="erros" th:if="${#fields.hasErrors('creditScore')}" th:errors="*{creditScore}"></span>
+        </fieldset>
+
+        <fieldset>
+            <label for="cep">CEP: </label>
+            <input type="text" name="cep" id="cep" th:field="*{CEP}">
+            <span class="erros" th:if="${#fields.hasErrors('CEP')}" th:errors="*{CEP}"></span>
+        </fieldset>
+
+        <fieldset>
+            <label for="courseCode">Course Code:</label>
+            <input type="text" name="courseCode" id="courseCode" th:field="*{course}">
+            <span class="erros" th:if="${#fields.hasErrors('course')}" th:errors="*{course}"></span>
+        </fieldset>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

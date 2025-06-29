@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Costumer Confirm</title>
+</head>
+<body>
+    <h3 th:text="${customer.firstName} + ' ' + ${customer.lastName}"></h3>
+    <p th:text="'Score: ' + ${customer.creditScore}"></p>
+    <p th:text="'CEP: ' + ${customer.CEP}"></p>
+    <p th:text="'Course Code: ' + ${customer.course}"></p>
+</body>
+</html>

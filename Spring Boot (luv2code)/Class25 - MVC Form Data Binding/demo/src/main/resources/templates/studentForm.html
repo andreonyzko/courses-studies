@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student Form</title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+    </head>
+    <body>
+        <form th:action="@{/student}" th:object="${student}" method="post" class="container">
+            <h2>Student registration form</h2>
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" th:field="*{firstName}">
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" th:field="*{lastName}">
+            </fieldset>
+            <fieldset>
+                <label for="country">Country: </label>
+                <select id="country" th:field="*{country}">
+                    <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"></option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="language">Favorite language:</label>
+                <div class="radio-input-container">
+                    <input type="radio" id="language"
+                           th:field="*{devLanguage}"
+                           th:each="tempLanguage : ${languages}"
+                           th:value="${tempLanguage}"
+                           th:text="${tempLanguage}"
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="system">Operating System:</label>
+                <div class="radio-input-container">
+                    <input type="checkbox" name="system" id="system"
+                           th:field="*{system}"
+                           th:each="tempSys : ${systems}"
+                           th:value="${tempSys}"
+                           th:text="${tempSys}"
+                    />
+                </div>
+            </fieldset>
+            <input type="submit" value="Register">
+        </form>
+    </body>
+</html>

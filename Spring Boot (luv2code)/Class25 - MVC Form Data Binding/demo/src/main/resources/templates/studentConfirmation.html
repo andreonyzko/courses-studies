@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Confirmation</title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+    </head>
+    <body>
+      <div class="container">
+          <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" alt="User">
+          <h2 th:text="${student.firstName.toUpperCase()} + ' ' + ${student.lastName.toUpperCase()}"></h2>
+          <p th:text="'Country: ' + ${student.country}"></p>
+          <p th:text="${student.devLanguage} + ' developer'"></p>
+          <ul>
+              <p th:text="'Operating System:'"></p>
+              <li th:each="tempSys : ${student.system}" th:text="${tempSys}"></li>
+          </ul>
+      </div>
+    </body>
+</html>
