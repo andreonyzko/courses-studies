@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    width: 90%;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1{
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.btn{
+    color: white;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.addBtn{
+    align-self: start;
+    background-color: #356EE9;
+}
+.updateBtn, .saveBtn{ background-color: #4093A8; }
+.deleteBtn{background-color: #BB4B4E; }
+.saveBtn{ width: 50%; }
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #EEEEEE;
+
+    thead{
+        background-color: #202123;
+        color: white;
+        text-align: left;
+
+        th{
+            font-weight: bold;
+        }
+    }
+
+    tr:nth-child(even){
+        background-color: #EEEEEE;
+    }
+
+
+    td, th{
+        padding: 10px;
+    }
+}
+
+form{
+    min-width: 20%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    input{
+        border: 1px solid #afafaf;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error{
+    color: red;
+    font-size: 0.75em;
+}
