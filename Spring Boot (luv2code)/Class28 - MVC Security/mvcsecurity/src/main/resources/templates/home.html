@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <style>
+        body{
+            background-color: #2C2D31;
+            color: white;
+        }
+
+        a{text-decoration: none; color: white;}
+        hr{margin: 20px 0}
+    </style>
+</head>
+<body>
+    <h1>Home page</h1>
+
+    <hr>
+
+    <p>Welcome to home page!</p>
+
+    <hr>
+
+    <p>User: <span sec:authentication="principal.username"></span></p>
+    <p>Roles: <span sec:authentication="principal.authorities"></span></p>
+
+    <hr>
+
+    <a th:href="@{/leaders}" sec:authorize="hasRole('MODERATOR')">Leadership Meeting (Only Moderators)</a>
+    <br>
+    <a th:href="@{/systems}" sec:authorize="hasRole('ADMIN')">Systems page (Only Administrators)</a>
+
+    <hr sec:authorize="hasAnyRole('MODERATOR', 'ADMIN')">
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
